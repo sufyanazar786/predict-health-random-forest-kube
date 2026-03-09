@@ -49,6 +49,13 @@ python train.py
 uvicorn main:app --reload
 ```
 
+## Execute the Frontend in another terminal
+
+```
+python app.py
+```
+
+
 ### Sample Input for /predict
 
 ```
@@ -80,5 +87,6 @@ docker run -p 8000:8000 diabetes-prediction-model
 ```
 kubectl apply -f diabetes-prediction-model-deployment.yaml
 ```
+
 
 
