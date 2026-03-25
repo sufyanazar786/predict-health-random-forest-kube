@@ -3,7 +3,8 @@ import gradio as gr
 import requests
 import os
 
-API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
+# API_URL = os.getenv("API_URL", "http://127.0.0.1:8000")
+API_URL= https://diabetes-api-768n.onrender.com
 
 def predict_diabetes(pregnancies, glucose, blood_pressure, bmi, age):
     payload = {
