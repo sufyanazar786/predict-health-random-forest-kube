@@ -21,14 +21,14 @@ def predict_diabetes(pregnancies, glucose, blood_pressure, bmi, age):
 
         if result["diabetic"]:
             return (
-                "⚠️ High Risk: Diabetic",
+                " High Risk: Diabetic",
                 "The model predicts this person is likely **diabetic**.\n\n"
                 "> ℹ️ This is a machine learning prediction, not a medical diagnosis. "
                 "Please consult a healthcare professional."
             )
         else:
             return (
-                "✅ Low Risk: Not Diabetic",
+                " Low Risk: Not Diabetic",
                 "The model predicts this person is likely **not diabetic**.\n\n"
                 "> ℹ️ This is a machine learning prediction, not a medical diagnosis. "
                 "Please consult a healthcare professional."
@@ -36,11 +36,11 @@ def predict_diabetes(pregnancies, glucose, blood_pressure, bmi, age):
 
     except requests.exceptions.ConnectionError:
         return (
-            "❌ Connection Error",
+            "Connection Error",
             "Could not connect to the prediction API. Make sure the FastAPI server is running."
         )
     except Exception as e:
-        return ("❌ Error", f"Something went wrong: {str(e)}")
+        return ("Error", f"Something went wrong: {str(e)}")
 
 
 # ---------- UI Layout ----------
